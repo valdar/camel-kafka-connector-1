@@ -155,17 +155,14 @@ public class CamelSourceTask extends SourceTask {
                     records.add(record);
                 }
                 collectedRecords++;
-            } else {
-                break;
             }
         }
 
         if (records.isEmpty()) {
-            return Collections.EMPTY_LIST;
+            return null;
         } else {
             return records;
         }
-
     }
 
     @Override
